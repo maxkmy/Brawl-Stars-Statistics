@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<h1> Here is you user profile </h1>
+
+	<p>Player Tag: {{ playerTag }}</p>
+	<p>Name: {{ playerName}} </p>
+	<p>Trophies: {{ playerTrophies }}</p>
+	<p>Experience: {{ playerExperience }}</p>
+
+	<br>
+
+	{% for brawler in brawlerList %}
+		<p>Name: {{ brawler.0 }}</p>
+		<p>Power: {{ brawler.1 }}</p>
+		<p>Rank: {{ brawler.2 }}</p>
+		<p>Trophies: {{ brawler.3 }} </p>
+		<br>
+	{% endfor %}
+{% endblock content %}
